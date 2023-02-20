@@ -9,12 +9,13 @@ const cors = require('cors');
 // };
 
 const PORT = process.env.PORT || 5500;
+const app = express();
 
 const connectDB = require('./conexiondb')
 
 const TodoItemRoute = require('./routes/todoItems')
 
-const app = express();
+
 app.use(express.json());
 // app.use(cors(corsOptions));
 app.use(cors());
