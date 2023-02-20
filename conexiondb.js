@@ -9,7 +9,6 @@ const connectDB = () => {
       .connect(process.env.DB_CONNECT, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        useFindAndModify: false,
       })
       .then(() => console.log("Connected successfully"))
       .catch((err) => console.error(err));;
