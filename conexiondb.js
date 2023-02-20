@@ -4,7 +4,8 @@ dotenv.config();
 
 const connectDB = () => {
     // Método de conexión para la base de datos
-    mongoose
+  mongoose.set("strictQuery", false);  
+  mongoose
       .connect(process.env.DB_CONNECT, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
